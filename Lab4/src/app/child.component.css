@@ -1,0 +1,31 @@
+
+h2 {
+    margin-bottom: 10px;
+  }
+  
+  .students-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: auto;
+    max-width: 400px;
+  }
+  
+  .students-container div {
+    margin-bottom: 5px;
+  }
+  
+  .students-container div span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .group-average {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  :host {
+    margin-top: 20px;
+  }

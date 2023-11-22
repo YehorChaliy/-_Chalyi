@@ -1,0 +1,12 @@
+<div>
+  <h2>Group Average</h2>
+  <p *ngIf="students.length > 0">Group Average: {{ groupAverage }}</p>
+  <p *ngIf="students.length === 0">No students added yet.</p>
+
+  <h2>Students and Grades:</h2>
+  <ul *ngIf="students.length > 0">
+    <li *ngFor="let student of students">
+      {{ student.name }} - {{ student.grade }}
+    </li>
+  </ul>
+</div>

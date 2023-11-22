@@ -1,0 +1,30 @@
+input[type="text"],
+input[type="number"],
+button {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+app-child {
+  display: block;
+  margin-top: 20px;
+}
+
+:host {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
