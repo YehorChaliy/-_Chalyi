@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Users List</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Gender</th>
+              <th>Date of Birth</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let user of users">
+              <tr (click)="openModal(user)" class="user-row">
+                <td>{{ user.name.first }}</td>
+                <td>{{ user.name.last }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.dob.date | date: 'shortDate' }}</td>
+                <td>{{ user.dob.age }}</td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </ion-col>
+
+      <ion-col size="6">
+        <favorites-component></favorites-component>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

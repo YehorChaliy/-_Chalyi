@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<table style="width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;">
+  <thead>
+    <tr>
+      <th style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">Name</th>
+      <th style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">Surname</th>
+      <th style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">Gender</th>
+      <th style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">Date of Birth</th>
+      <th style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let fav of favorite">
+      <tr>
+        <td style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">{{ fav.name.first }}</td>
+        <td style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">{{ fav.name.last }}</td>
+        <td style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">{{ fav.gender }}</td>
+        <td style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">{{ fav.dob.date | date: 'shortDate' }}</td>
+        <td style="padding: 15px; text-align: left; border-bottom: 1px solid #ddd;">{{ fav.dob.age }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
